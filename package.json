@@ -1,0 +1,16 @@
+{
+  "name": "telegram-sticker-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot that responds to specific stickers",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "node bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
