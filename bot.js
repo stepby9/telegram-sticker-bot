@@ -12,7 +12,7 @@ const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 // Your sticker mapping
 const stickerMap = {
     // Trigger sticker -> Response sticker
-    'CAACAgQAAxkBAAE7JUBoyBQM-l6Ii4L78U1ODXOcuX6t_QACEQsAAvRKEVPQ5z6DiIPfLDYE': 'CAACAgQAAxkBAAE7JzloyDpdU9u1ioEkQDSfdRyDVAMokgACwAkAAtxO0FKD4ZV3-kyfuDYE'
+    'CAACAgQAAyEFAASz83xjAAMTaMg8ue6oj_jhkyqVY-YyrkNkGYQAAhELAAL0ShFT0Oc-g4iD3yw2BA': 'CAACAgIAAyEFAASz83xjAAMUaMg8v0sLqjrnZU0u11eQ4mp1woEAAvcVAALpVQUYYoZ5jaRxX4U2BA'
 };
 
 console.log('Bot is starting...');
