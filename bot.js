@@ -80,7 +80,7 @@ bot.on('message', (msg) => {
             // Send photo as a reply
             bot.sendPhoto(chatId, RESPONSE_PHOTO, {
                 reply_to_message_id: messageId,
-                caption: '🐱' // Optional caption
+                //caption: '🐱' // Optional caption
             }).then(() => {
                 console.log('Response photo sent successfully!');
             }).catch(error => {
