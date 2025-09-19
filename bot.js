@@ -30,6 +30,22 @@ bot.on('message', (msg) => {
         return;
     }
     
+    // Check if message contains a photo
+    if (msg.photo) {
+        console.log('\n=== PHOTO RECEIVED ===');
+        console.log(`From user: ${msg.from.first_name} (@${msg.from.username || 'no_username'})`);
+        console.log(`Photo sizes available:`);
+        
+        msg.photo.forEach((photo, index) => {
+            console.log(`  Size ${index}: ${photo.width}x${photo.height} - ID: ${photo.file_id}`);
+        });
+        
+        // Get the largest photo (last in array)
+        const largestPhoto = msg.photo[msg.photo.length - 1];
+        console.log(`\n📷 LARGEST PHOTO ID: ${largestPhoto.file_id}`);
+        console.log('====================\n');
+    }
+    
     // Check if message contains a sticker
     if (msg.sticker) {
         const stickerFileId = msg.sticker.file_id;
