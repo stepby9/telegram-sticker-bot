@@ -18,7 +18,7 @@ const stickerMap = {
 console.log('Bot is starting...');
 
 // The photo/image you want to send (you can use file_id, URL, or file path)
-const RESPONSE_PHOTO = 'https://i.imgur.com/your-image.jpg'; // Replace with your image URL or file_id
+const RESPONSE_PHOTO = 'AgACAgQAAyEFAASz83xjAAICn2jNdSgVhw613XVgZ655sFJHdFHAAAJdyTEbICBxUhz2KRfDzjBrAQADAgADeQADNgQ'; // Replace with your image URL or file_id
 
 // Handle all messages
 bot.on('message', (msg) => {
