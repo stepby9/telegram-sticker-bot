@@ -12,10 +12,13 @@ const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 // Your sticker mapping
 const stickerMap = {
     // Trigger sticker -> Response sticker
-    'CAACAgQAAyEFAASz83xjAAMTaMg8ue6oj_jhkyqVY-YyrkNkGYQAAhELAAL0ShFT0Oc-g4iD3yw2BA': 'CAACAgQAAyEFAASz83xjAAMYaMg9FGUur-PnhKWn2H-IVjSIUb4AAsAJAALcTtBSg-GVd_pMn7g2BA'
+    'CAACAgQAAxkBAAE7JUBoyBQM-l6Ii4L78U1ODXOcuX6t_QACEQsAAvRKEVPQ5z6DiIPfLDYE': 'CAACAgQAAxkBAAE7JzloyDpdU9u1ioEkQDSfdRyDVAMokgACwAkAAtxO0FKD4ZV3-kyfuDYE'
 };
 
 console.log('Bot is starting...');
+
+// The photo/image you want to send (you can use file_id, URL, or file path)
+const RESPONSE_PHOTO = 'https://i.imgur.com/your-image.jpg'; // Replace with your image URL or file_id
 
 // Handle all messages
 bot.on('message', (msg) => {
@@ -45,6 +48,27 @@ bot.on('message', (msg) => {
                 console.log('Response sticker sent successfully!');
             }).catch(error => {
                 console.error('Error sending sticker:', error);
+            });
+        }
+    }
+    
+    // Check if message contains text with "кис" substring
+    if (msg.text) {
+        const messageText = msg.text.toLowerCase();
+        console.log(`Received text message: ${msg.text}`);
+        
+        // Check if text contains "кис" (case insensitive)
+        if (messageText.includes('кис')) {
+            console.log('Text containing "кис" detected! Sending photo response...');
+            
+            // Send photo as a reply
+            bot.sendPhoto(chatId, RESPONSE_PHOTO, {
+                reply_to_message_id: messageId,
+                caption: '🐱' // Optional caption
+            }).then(() => {
+                console.log('Response photo sent successfully!');
+            }).catch(error => {
+                console.error('Error sending photo:', error);
             });
         }
     }
