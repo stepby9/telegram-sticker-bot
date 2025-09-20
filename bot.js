@@ -118,7 +118,7 @@ bot.on('message', (msg) => {
             // Send random photo as a reply
             bot.sendPhoto(chatId, randomPhoto, {
                 reply_to_message_id: messageId,
-                caption: '🐱' // Optional caption
+                //caption: '🐱' // Optional caption
             }).then(() => {
                 console.log('Random response photo sent successfully!');
             }).catch(error => {
