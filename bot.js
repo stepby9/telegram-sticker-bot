@@ -46,7 +46,7 @@ const RESPONSE_PHOTOS = [
 // Your sticker mapping
 const stickerMap = {
     // Trigger sticker -> Response sticker
-    'CAACAgQAAyEFAASz83xjAAMTaMg8ue6oj_jhkyqVY-YyrkNkGYQAAhELAAL0ShFT0Oc-g4iD3yw2BA': 'CAACAgQAAyEFAASz83xjAAMYaMg9FGUur-PnhKWn2H-IVjSIUb4AAsAJAALcTtBSg-GVd_pMn7g2BA'
+    'CAACAgQAAyEFAASz83xjAAIGHGjU4tW59v3wWdLeGYA-Skaj9crCAAIRCwAC9EoRU9DnPoOIg98sNgQ': 'CAACAgQAAyEFAASz83xjAAMYaMg9FGUur-PnhKWn2H-IVjSIUb4AAsAJAALcTtBSg-GVd_pMn7g2BA'
 };
 
 // Create bot instance
